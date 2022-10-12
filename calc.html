@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Calculadora</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1>Calculadora</h1>
+        <label>Número 1:</label>
+        <input type="number" id="n1"/>
+        <br><br>
+        <label>Número 2:</label>
+        <input type="number" id="n2"/>
+        <br><br>
+        <button class="botao" id="btn_soma">+</button>
+        <button class="botao" id="btn_sub">-</button>
+        <button class="botao" id="btn_mult">*</button>
+        <button class="botao" id="btn_div">/</button>
+        <p id="res">Resultado: </p>
+
+        <script>
+            $("#btn_soma").click(()=>{
+                let val1 = $("#n1").val()
+                let val2 = $("#n2").val()
+                let soma = parseInt(val1) + parseInt(val2)
+                $("#res").text(soma)
+            })
+
+            $("#btn_sub").click(()=>{
+                let val1 = $("#n1").val()
+                let val2 = $("#n2").val()
+                let sub = parseInt(val1) - parseInt(val2)
+                $("#res").text(sub)
+            })
+
+            $("#btn_mult").click(()=>{
+                let val1 = $("#n1").val()
+                let val2 = $("#n2").val()
+                let mult = parseInt(val1) * parseInt(val2)
+                $("#res").text(mult)
+            })
+
+            $("#btn_div").click(()=>{
+                let val1 = $("#n1").val()
+                let val2 = $("#n2").val()
+                let div = parseInt(val1) / parseInt(val2)
+                $("#res").text(div)
+            })
+        </script>
+    </body>
+</html>
